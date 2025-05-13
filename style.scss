@@ -1,3 +1,5 @@
+@import "vars";
+
 * {
     padding: 0px;
     margin: 0px;
@@ -9,4 +11,70 @@ body {
 
 a {
     text-decoration: none;
+}
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+.top {
+    padding-top: 196px;
+    padding-bottom: 156px;
+    background-color: $lightgreen;
+    background-image: url(img/star_2.png), 
+    url(img/star_3.png), url(img/star_4.png), 
+    url(img/star_5.png), url(img/vector.png);
+    background-repeat: no-repeat;
+    background-position: 98px 109px, 193px 69px,
+    calc(100% - 344px) 525px, calc(100% - 450px) 500px, 
+    calc(100%) 0px;
+
+    &__head {
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 78px;
+        color: $black;
+        padding-bottom: 24px;
+        width: 768px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        width: 720px;
+        color: $black;
+    }
+
+    &__link {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        color: $black;
+    }
+
+    &__btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 48px;
+        box-sizing: border-box;
+        border: 1px solid $black;
+        border-radius: 60px;
+        background: $black;
+        padding: 16px 65px;
+        text-align: center;
+        color: $white;
+        font-family: inherit;
+        font-size: 24px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: $white;
+            color: $black;
+        }
+    }
 }
