@@ -66,4 +66,20 @@ a {
 .top__button:hover {
   background: rgb(255, 255, 255);
   color: rgb(32, 32, 39);
+}
+
+.games {
+  background-color: rgb(32, 32, 39);
+  height: 1440px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(189, 237, 53);
+  height: 150px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
 }/*# sourceMappingURL=style.css.map */

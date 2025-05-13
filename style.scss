@@ -79,6 +79,20 @@ a {
     }
 }
 
-.game {
-    
+.games {
+   background-color: $black;
+   height: 1440px;
+
+
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $green;
+    height: 150px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
 }
