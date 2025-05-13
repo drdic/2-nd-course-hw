@@ -54,7 +54,7 @@ a {
         color: $black;
     }
 
-    &__btn {
+    &__button {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -77,4 +77,8 @@ a {
             color: $black;
         }
     }
+}
+
+.game {
+    
 }
