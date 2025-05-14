@@ -10,25 +10,83 @@
 </head>
 
 <body>
-    <div class="top">
+    <div class="top center">
         <h1 class="top__head">Добро пожаловать<br>на мой сайт мини-игр</h1>
         <p class="top__text">Тебе предстоит пройти несколько увлекательных игр. Если готов, нажимай
-            <a href="#" class="top__link">Поехали</a> и приступай.
+            <a href="#games-section" class="top__link">"Поехали"</a> и 
+            <a href="#games-section" class="top__link">приступай.</a>
         </p>
-
-
-
-
+        <a href="#games-section" class="top__button">Поехали!</a>
     </div>
+    <!-- <div class="menu">
+        Тут будет полоса прокрутки
+    </div> -->
+    <section class="games center" id="games-section">
+        <h2 class="games__title">Об играх</h2>
+        <p class="games__text">В моей коллекции представлено 6 игр на разные темы. Игры несложные — в них может поиграть
+            каждый. Все игры доступны для пользования.</p>
+        <div class="games__card">
+            <a class="games__link" href="#">
+                <article class="game">
+                    <img class="games__img" src="img/game_1.png" alt="Угадай число">
+                    <div class="games__content">
+                        <p class="games__number">Игра № 1</p>
+                        <h3 class="games__name">Угадай число</h3>
+                    </div>
+                </article>
+            </a>
+            <a class="games__link" href="#">
+                <article class="game game_big">
+                    <img class="games__img" src="img/game_2.png" alt="Простая арифметика">
+                    <div class="games__content">
+                        <p class="games__number">Игра № 2</p>
+                        <h3 class="games__name">Простая арифметика</h3>
+                    </div>
+                </article>
+            </a>
+            <a class="games__link" href="#">
+                <article class="game">
+                    <img class="games__img" src="img/game_3.png" alt="Переверни текст">
+                    <div class="games__content">
+                        <p class="games__number">Игра № 3</p>
+                        <h3 class="games__name">Переверни текст</h3>
+                    </div>
+                </article>
+            </a>
+            <a class="games__link" href="#">
+                <article class="game game_huge">
+                    <img class="games__img" src="img/game_4.png" alt="Камень, ножницы, бумага">
+                    <div class="games__content">
+                        <p class="games__number">Игра № 4</p>
+                        <h3 class="games__name">Камень, ножницы, бумага</h3>
+                    </div>
+                </article>
+            </a>
+            <a class="games__link" href="#">
+                <article class="game game_big">
+                    <img class="games__img" src="img/game_5.png" alt="Простая викторина">
+                    <div class="games__content">
+                        <p class="games__number">Игра № 5</p>
+                        <h3 class="games__name">Простая викторина</h3>
+                    </div>
+                </article>
+            </a>
+            <a class="games__link" href="#">
+                <article class="game game_huge">
+                    <img class="games__img" src="img/game_6.png" alt="Генератор случайных цветов">
+                    <div class="games__content">
+                        <p class="games__number">Игра № 6</p>
+                        <h3 class="games__name">Генератор случайных цветов</h3>
+                    </div>
+                </article>
+            </a>
+        </div>
+    </section>
 
-</body>
-
-<footer>
-
+<footer class="footer">
+    Все права защищены.
 </footer>
 
 </body>
-
-<script src="main.js"></script>
 
 </html>
