@@ -1,92 +1,65 @@
-@media (max-width: 376px) {
-  .center {
-    padding-left: 16px;
-    padding-right: 16px;
+@media (max-width: 767px) {
+  
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
   }
 
   .top {
-    padding-top: 64px;
-    padding-bottom: 64px;
-    background-image: none;
+        background-color: $lightgreen;
+        background-image: url(img/star_mobile.png), 
+        url(img/star_mobile_2.png), url(img/star_mobile_3.png),
+        url(img/star_mobile_4.png), url(img/vector_mobile.png);
+        background-repeat: no-repeat;
+        background-position:
+        61px 135px, 120px 79px,
+        calc(100% - 124px) 600px,
+        calc(100% - 70px) 630px,
+        calc(100%) 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: auto;
 
     &__head {
-      font-size: 32px;
-      line-height: 40px;
-      width: 100%;
+        font-size: 40px;
+        line-height: 49px;
+        width: 262px;
     }
 
     &__text {
-      font-size: 16px;
-      line-height: 24px;
-      width: 100%;
+        font-size: 16px;
+        line-height: 20px;
     }
 
+    &__link {
+        font-size: 16px;
+        line-height: 20px;
+        }
+
     &__button {
-      font-size: 18px;
-      padding: 12px 24px;
-      margin-top: 24px;
+        margin-top: 36px;
     }
   }
 
   .menu {
-    height: auto;
-    flex-direction: column;
-    padding: 16px 0;
-    overflow-x: auto;
-    white-space: nowrap;
+        height: 51px;
+        width: auto;
+        display: none;
 
     &__item {
-      font-size: 18px;
-      padding: 12px 16px;
-
-      &__first {
-        padding-left: 16px;
-      }
+        font-size: 16px;
     }
 
     &__img {
-      display: none;
+        width: 18px;
+        height: 18px;
     }
   }
 
   .games {
-    height: auto;
-    padding-bottom: 64px;
-    background-image: none;
-
-    &__title {
-      font-size: 32px;
-      line-height: 40px;
-      padding-top: 48px;
-    }
-
-    &__text {
-      font-size: 16px;
-      line-height: 24px;
-      width: 100%;
-      margin-bottom: 32px;
-    }
-
-    &__card {
-      flex-direction: column;
-      gap: 24px;
-    }
-
-    &__link:nth-child(4),
-    &__link:nth-child(6) {
-      margin-top: 0;
-    }
-
-    &__img {
-      width: 100%;
-      height: auto;
-    }
-
-    &__name {
-      font-size: 24px;
-      line-height: 30px;
-      width: 100%;
-    }
+    display: none;
   }
 
   .footer {
