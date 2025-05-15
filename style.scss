@@ -79,6 +79,36 @@ a {
     }
 }
 
+.menu {
+    height: 90px;
+    width: 100%;
+    background-color: $green;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(50px);
+    overflow: hidden;
+
+    &__item {
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 27px 51px;
+        white-space: nowrap;
+
+        &__first {
+            padding-left: 19px;
+        }
+    }
+
+    &__img {
+        width: 36px;
+        height: 36px;
+    }
+}
+
 .game {
     height: 473px;
     border-radius: 30px;
