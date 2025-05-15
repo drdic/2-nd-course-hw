@@ -1,0 +1,84 @@
+@media (max-width: 768px) and (min-width: 377px) {
+  .center {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .top {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    background-position: 20px 60px, 40px 30px, calc(100% - 100px) 400px, calc(100% - 150px) 380px, 100% 0px;
+
+    &__head {
+      font-size: 48px;
+      line-height: 56px;
+      width: 100%;
+    }
+
+    &__text {
+      font-size: 20px;
+      line-height: 28px;
+      width: 100%;
+    }
+
+    &__button {
+      font-size: 20px;
+      padding: 14px 40px;
+    }
+  }
+
+  .menu {
+    height: 70px;
+
+    &__item {
+      font-size: 20px;
+      padding: 20px 30px;
+
+      &__first {
+        padding-left: 20px;
+      }
+    }
+
+    &__img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .games {
+    height: auto;
+    padding-bottom: 80px;
+    background-position: 20px 600px, 10px 550px, 600px 100px;
+
+    &__title {
+      font-size: 48px;
+      line-height: 56px;
+    }
+
+    &__text {
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    &__card {
+      gap: 24px;
+      justify-content: center;
+    }
+
+    &__img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+    }
+
+    &__name {
+      font-size: 28px;
+      line-height: 34px;
+    }
+  }
+
+  .footer {
+    height: 100px;
+    font-size: 20px;
+  }
+}

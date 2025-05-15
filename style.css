@@ -1,3 +1,151 @@
+@media (max-width: 376px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .top {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background-image: none;
+  }
+  .top__head {
+    font-size: 32px;
+    line-height: 40px;
+    width: 100%;
+  }
+  .top__text, .games__text {
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%;
+  }
+  .top__button {
+    font-size: 18px;
+    padding: 12px 24px;
+    margin-top: 24px;
+  }
+  .menu {
+    height: auto;
+    flex-direction: column;
+    padding: 16px 0;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .menu__item {
+    font-size: 18px;
+    padding: 12px 16px;
+  }
+  .menu__item__first {
+    padding-left: 16px;
+  }
+  .menu__img {
+    display: none;
+  }
+  .games {
+    height: auto;
+    padding-bottom: 64px;
+    background-image: none;
+  }
+  .games__title {
+    font-size: 32px;
+    line-height: 40px;
+    padding-top: 48px;
+  }
+  .games__text {
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  .games__card {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .games__link:nth-child(4), .games__link:nth-child(6) {
+    margin-top: 0;
+  }
+  .games__img {
+    width: 100%;
+    height: auto;
+  }
+  .games__name {
+    font-size: 24px;
+    line-height: 30px;
+    width: 100%;
+  }
+  .footer {
+    height: 80px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) and (min-width: 377px) {
+  .center {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .top {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    background-position: 20px 60px, 40px 30px, calc(100% - 100px) 400px, calc(100% - 150px) 380px, 100% 0px;
+  }
+  .top__head {
+    font-size: 48px;
+    line-height: 56px;
+    width: 100%;
+  }
+  .top__text, .games__text {
+    font-size: 20px;
+    line-height: 28px;
+    width: 100%;
+  }
+  .top__button {
+    font-size: 20px;
+    padding: 14px 40px;
+  }
+  .menu {
+    height: 70px;
+  }
+  .menu__item {
+    font-size: 20px;
+    padding: 20px 30px;
+  }
+  .menu__item__first {
+    padding-left: 20px;
+  }
+  .menu__img {
+    width: 24px;
+    height: 24px;
+  }
+  .games {
+    height: auto;
+    padding-bottom: 80px;
+    background-position: 20px 600px, 10px 550px, 600px 100px;
+  }
+  .games__title {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  .games__text {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .games__card {
+    gap: 24px;
+    justify-content: center;
+  }
+  .games__img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+  .games__name {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .footer {
+    height: 100px;
+    font-size: 20px;
+  }
+}
 * {
   padding: 0px;
   margin: 0px;
