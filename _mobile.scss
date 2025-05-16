@@ -5,6 +5,13 @@
         padding-right: 16px;
   }
 
+  .button {
+    width: 285px;
+    height: 55px;
+    font-size: 16px;
+    align-self: center;
+  }
+
   .top {
         background-color: $lightgreen;
         background-image: url(img/star_mobile.png), 
@@ -60,6 +67,67 @@
 
   .games {
     display: none;
+  }
+
+  .mini-games {
+    width: auto;
+    padding-bottom: 49px;
+
+    &__head {
+        font-size: 40px;
+        line-height: 100%;
+        padding-bottom: 48px;
+        padding-top: 48px;    
+    }
+
+    &__card {
+        flex-direction: column-reverse;
+        height: 529px;
+    }
+
+    &__card:nth-child(2),
+    &__card:nth-child(4),
+    &__card:nth-child(6) {
+        flex-direction: column-reverse;
+    }
+
+    &__card:nth-child(1),
+    &__card:nth-child(4) {
+        height: 529px;
+    }
+
+    &__card:nth-child(2),
+    &__card:nth-child(3) {
+        height: 568px;
+    }
+
+    &__card:nth-child(5) {
+        height: 607px;
+    }
+
+    &__card:nth-child(6) {
+        height: 627px;
+    }
+
+    &__content {
+        padding: 29px;
+    }
+
+    &__title {
+        font-size: 32px;
+        padding-bottom: 16px;
+        line-height: 100%;
+    }
+
+    &__text {
+        font-size: 16px;
+        padding-bottom: 32px;
+        line-height: 100%;
+    }
+
+    &__img {
+        width: 100%;
+    }
   }
 
   .footer {
