@@ -15,8 +15,9 @@ function autoScroll() {
     }
     requestAnimationFrame(autoScroll);
 }
+// Останавливаем скроллинг при наведении
 
-menu.addEventListener('mouseenter', () => isScrolling = false);
-menu.addEventListener('mouseleave', () => isScrolling = true);
+// menu.addEventListener('mouseenter', () => isScrolling = false);
+// menu.addEventListener('mouseleave', () => isScrolling = true);
 
 autoScroll();
