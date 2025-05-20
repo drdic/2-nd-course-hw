@@ -1,4 +1,4 @@
-@import "vars";
+@import 'vars';
 
 * {
     padding: 0px;
@@ -43,7 +43,6 @@ a {
         font-weight: 400;
         font-size: 24px;
         line-height: 32px;
-        width: 720px;
         color: $black;
     }
 
@@ -79,6 +78,36 @@ a {
     }
 }
 
+.menu {
+    height: 90px;
+    width: 100%;
+    background-color: $green;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(50px);
+    overflow: hidden;
+
+    &__item {
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 27px 51px;
+        white-space: nowrap;
+
+        &__first {
+            padding-left: 19px;
+        }
+    }
+
+    &__img {
+        width: 36px;
+        height: 36px;
+    }
+}
+
 .game {
     height: 473px;
     border-radius: 30px;
@@ -95,12 +124,17 @@ a {
 
 .games {
    background-color: $black;
-   height: 1470px;
+   padding-bottom: 96px;
    background-image: url(img/star_big.png), url(img/star_small.png),
    url(img/star_about_games.png);
    background-repeat: no-repeat;
    background-position: 43px 830px, 29px 760px, 1024px 124px;
 
+   &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
 
    &__title {
         font-weight: 700;
@@ -115,12 +149,6 @@ a {
         @extend .top__text;
         color: $white;  
         margin-bottom: 72px;
-    }
-
-    &__card {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 32px;
     }
 
     &__link:hover {
@@ -173,6 +201,85 @@ a {
     }
 }
 
+.mini-games {
+    background-color: $black;
+    background-image: url(img/star_big.png), 
+    url(img/star_small.png), url(img/star_big.png), 
+    url(img/star_small.png);
+    background-repeat: no-repeat;
+    background-position: 1383px 60px, 
+    1329px 20px, 1400px 3290px, 1323px 3350px;
+    padding-bottom: 144px;
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &__head {
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 78px;
+        color: $white;
+        padding-bottom: 72px;
+    }
+
+    &__card{
+        height: 500px;
+        display: flex    ;
+        justify-content: space-between;
+        border-radius: 30px;
+        background: $white;
+        box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
+        overflow: hidden;
+    }
+
+    &__card:nth-child(2),
+    &__card:nth-child(4),
+    &__card:nth-child(6) {
+        flex-direction: row-reverse;
+    }
+
+    &__content {
+        padding: 48px;
+    }
+
+    &__title {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 59px;
+        padding-bottom: 24px;
+    }
+
+    &__text {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        padding-bottom: 36px;
+    }
+
+    &__button {
+        width: 247px;
+        height: 66px;
+        border-radius: 60px;
+        background: $black;
+        font-size: 24px;
+        font-weight: 600;
+        color: $white;
+        transition: 0.3s ease;
+
+        &:hover {
+            background: $white;
+            color: $black;
+        }
+    }
+
+    &__img {
+        height: 100%;
+    }
+}
+
 .footer {
     display: flex;
     align-items: center;
@@ -183,3 +290,5 @@ a {
     font-size: 24px;
     line-height: 100%;
 }
+
+@import 'mobile';
