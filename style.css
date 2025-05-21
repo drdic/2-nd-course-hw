@@ -66,6 +66,9 @@ a {
   background: rgb(255, 255, 255);
   color: rgb(32, 32, 39);
 }
+.top__button.mobile-only {
+  display: none;
+}
 
 .menu {
   display: flex;
@@ -268,7 +271,7 @@ a {
     padding-right: 16px;
   }
   .button {
-    width: 100%;
+    width: 285px;
     height: 55px;
     font-size: 16px;
     align-self: center;
@@ -298,7 +301,21 @@ a {
     line-height: 20px;
   }
   .top__button {
+    width: 285px;
+    height: 55px;
     margin-top: 36px;
+    font-size: 16px;
+    align-self: center;
+  }
+  .top__button:hover, .top__button:active {
+    background: rgb(32, 32, 39);
+    color: rgb(255, 255, 255);
+  }
+  .top__button.mobile-only {
+    display: inline-block;
+  }
+  .top__button.desktop-only {
+    display: none;
   }
   .menu {
     height: 51px;
@@ -358,6 +375,10 @@ a {
   }
   .mini-games__img {
     width: 100%;
+  }
+  .mini-games__button:hover, .mini-games__button:active {
+    background: rgb(32, 32, 39);
+    color: rgb(255, 255, 255);
   }
   .footer {
     height: 80px;

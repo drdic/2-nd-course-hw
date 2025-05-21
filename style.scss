@@ -75,7 +75,13 @@ a {
             background: $white;
             color: $black;
         }
+
+        &.mobile-only {
+            display: none;
+        }
+
     }
+
 }
 
 .menu {
