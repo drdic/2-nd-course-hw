@@ -66,24 +66,35 @@ a {
   background: rgb(255, 255, 255);
   color: rgb(32, 32, 39);
 }
+.top__button.mobile-only {
+  display: none;
+}
 
 .menu {
-  height: 90px;
+  display: flex;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overflow: hidden;
+  white-space: nowrap;
   width: 100%;
+  height: 90px;
   background-color: rgb(189, 237, 53);
-  display: inline-flex;
   flex-direction: row;
   align-items: center;
   box-sizing: border-box;
   border: 1px solid rgba(255, 255, 255, 0.2);
   -webkit-backdrop-filter: blur(50px);
           backdrop-filter: blur(50px);
-  overflow: hidden;
 }
 .menu__item {
+  flex: 0 0 auto;
+  margin-right: 20px;
+  display: inline-block;
+  margin-right: 20px;
   font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
+  color: rgb(32, 32, 39);
   padding: 27px 51px;
   white-space: nowrap;
 }
@@ -91,6 +102,10 @@ a {
   padding-left: 19px;
 }
 .menu__img {
+  flex: 0 0 auto;
+  margin-right: 20px;
+  display: inline-block;
+  margin-right: 20px;
   width: 36px;
   height: 36px;
 }
@@ -220,9 +235,11 @@ a {
   padding-bottom: 36px;
 }
 .mini-games__button {
+  font-family: "Montserrat", sans-serif;
   width: 247px;
   height: 66px;
   border-radius: 60px;
+  border: 1px solid rgb(32, 32, 39);
   background: rgb(32, 32, 39);
   font-size: 24px;
   font-weight: 600;
@@ -254,7 +271,7 @@ a {
     padding-right: 16px;
   }
   .button {
-    width: 100%;
+    width: 285px;
     height: 55px;
     font-size: 16px;
     align-self: center;
@@ -284,12 +301,25 @@ a {
     line-height: 20px;
   }
   .top__button {
+    width: 285px;
+    height: 55px;
     margin-top: 36px;
+    font-size: 16px;
+    align-self: center;
+  }
+  .top__button:hover, .top__button:active {
+    background: rgb(32, 32, 39);
+    color: rgb(255, 255, 255);
+  }
+  .top__button.mobile-only {
+    display: inline-block;
+  }
+  .top__button.desktop-only {
+    display: none;
   }
   .menu {
     height: 51px;
     width: auto;
-    display: none;
   }
   .menu__item {
     font-size: 16px;
@@ -345,6 +375,10 @@ a {
   }
   .mini-games__img {
     width: 100%;
+  }
+  .mini-games__button:hover, .mini-games__button:active {
+    background: rgb(32, 32, 39);
+    color: rgb(255, 255, 255);
   }
   .footer {
     height: 80px;
