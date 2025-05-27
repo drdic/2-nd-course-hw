@@ -22,13 +22,13 @@ a {
     padding-top: 196px;
     padding-bottom: 156px;
     background-color: $lightgreen;
-    background-image: url(img/star_2.png), 
-    url(img/star_3.png), url(img/star_4.png), 
-    url(img/star_5.png), url(img/vector.png);
+    background-image: url(img/star_2.png),
+        url(img/star_3.png), url(img/star_4.png),
+        url(img/star_5.png), url(img/vector.png);
     background-repeat: no-repeat;
     background-position: 98px 109px, 193px 69px,
-    calc(100% - 344px) 525px, calc(100% - 450px) 500px, 
-    calc(100%) 0px;
+        calc(100% - 344px) 525px, calc(100% - 450px) 500px,
+        calc(100%) 0px;
 
     &__head {
         font-weight: 700;
@@ -141,31 +141,31 @@ a {
 }
 
 .games {
-   background-color: $black;
-   padding-bottom: 96px;
-   background-image: url(img/star_big.png), url(img/star_small.png),
-   url(img/star_about_games.png);
-   background-repeat: no-repeat;
-   background-position: 43px 830px, 29px 760px, 1024px 124px;
+    background-color: $black;
+    padding-bottom: 96px;
+    background-image: url(img/star_big.png), url(img/star_small.png),
+        url(img/star_about_games.png);
+    background-repeat: no-repeat;
+    background-position: 43px 830px, 29px 760px, 1024px 124px;
 
-   &__cards {
+    &__cards {
         display: flex;
         flex-wrap: wrap;
         gap: 32px;
     }
 
-   &__title {
+    &__title {
         font-weight: 700;
         font-size: 64px;
         line-height: 78px;
         color: $white;
         padding-top: 94px;
         padding-bottom: 24px;
-   }
+    }
 
-   &__text {
+    &__text {
         @extend .top__text;
-        color: $white;  
+        color: $white;
         margin-bottom: 72px;
     }
 
@@ -190,7 +190,7 @@ a {
         flex-direction: column;
         gap: 16px;
         margin-top: 32px;
-        margin-left: 32px; 
+        margin-left: 32px;
         margin-right: 32px;
     }
 
@@ -221,12 +221,12 @@ a {
 
 .mini-games {
     background-color: $black;
-    background-image: url(img/star_big.png), 
-    url(img/star_small.png), url(img/star_big.png), 
-    url(img/star_small.png);
+    background-image: url(img/star_big.png),
+        url(img/star_small.png), url(img/star_big.png),
+        url(img/star_small.png);
     background-repeat: no-repeat;
-    background-position: 1383px 60px, 
-    1329px 20px, 1400px 3290px, 1323px 3350px;
+    background-position: 1383px 60px,
+        1329px 20px, 1400px 3290px, 1323px 3350px;
     padding-bottom: 144px;
 
     &__cards {
@@ -243,9 +243,9 @@ a {
         padding-bottom: 72px;
     }
 
-    &__card{
+    &__card {
         height: 500px;
-        display: flex    ;
+        display: flex;
         justify-content: space-between;
         border-radius: 30px;
         background: $white;
@@ -297,6 +297,11 @@ a {
 
     &__img {
         height: 100%;
+    }
+
+    &__button-link {
+        text-decoration: none;
+        display: inline-block;
     }
 }
 
