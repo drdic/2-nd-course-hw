@@ -11,6 +11,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    touch-action: manipulation;
+    -webkit-text-size-adjust: 100%;
 }
 
 .container {
@@ -20,14 +23,6 @@ body {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-
-    /* text-align: center;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 350px;
-    margin: 20px auto; */
 }
 
 input[type="number"], button {
@@ -53,7 +48,7 @@ button:hover {
 
 #resultMessage {
     margin: 20px 0;
-    font-size: 18px;
+    font-size: 24px;
     text-align: center;
 }
 
@@ -64,9 +59,37 @@ button:hover {
     text-align: center;
 }
 
-@media (max-width: 400px) {
+#backButton {
+  background-color: #4CAF50;
+  color: white;
+  margin-top: 15px;
+}
+
+#backButton:hover {
+  background-color: #45a049;
+}
+
+.game-button {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+@media (max-width: 376px) {
     .container {
         width: 100%;
         padding: 10px;
+    }
+
+    .game-container {
+        padding: 10px;
+        margin: 0;
+        width: 100%;
+        box-shadow: none;
     }
 }

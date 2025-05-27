@@ -15,56 +15,63 @@ function autoScroll() {
     }
     requestAnimationFrame(autoScroll);
 }
-// Останавливаем скроллинг при наведении
-
-// menu.addEventListener('mouseenter', () => isScrolling = false);
-// menu.addEventListener('mouseleave', () => isScrolling = true);
 
 autoScroll();
 
-// document.querySelector('.mini-games__button').addEventListener('click', function() {
-//   const popup = window.open('', 'Угадай число', 'width=600,height=600');
-//   popup.document.write(`
-//     <iframe src="guessTheNumber/index.html" 
-//             style="width:100%;height:100%;border:none;"></iframe>
-//   `);
-// });
 
 document.querySelector('.mini-games__button').addEventListener('click', function () {
-    // Параметры окна
-    const windowWidth = 700;  // ширина окна с игрой
-    const windowHeight = 600; // высота окна
+    // Определяем мобильное устройство
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-    // Вычисление позиции для центрирования
-    const windowLeft = (screen.width - windowWidth) / 2;
-    const windowTop = (screen.height - windowHeight) / 2;
+    // Параметры для разных устройств
+    const desktopParams = {
+        width: 500,
+        height: 600,
+        resizable: true
+    };
+
+    const mobileParams = {
+        width: screen.width * 0.95,
+        height: screen.height * 0.85,
+        resizable: false
+    };
+
+    // Выбираем параметры в зависимости от устройства
+    const params = isMobile ? mobileParams : desktopParams;
+
+    // Центрирование окна
+    const windowLeft = (screen.width - params.width) / 2;
+    const windowTop = (screen.height - params.height) / 2;
 
     // Настройки всплывающего окна
     const windowSettings = `
-    width=${windowWidth},
-    height=${windowHeight},
+    width=${params.width},
+    height=${params.height},
     left=${windowLeft},
     top=${windowTop},
     menubar=no,
     toolbar=no,
     location=no,
     status=no,
-    resizable=yes,
+    resizable=${params.resizable},
     scrollbars=no
-  `.replace(/\s+/g, ''); // Удаляем все пробелы
+  `.replace(/\s+/g, '');
 
-    // Открываем окно с игрой
+    // Для мобильных - открываем в текущей вкладке
+    if (isMobile) {
+        window.location.href = 'guessTheNumber/index.html';
+        return;
+    }
+
+    // Для десктопа - открываем popup
     const gameWindow = window.open(
         'guessTheNumber/index.html',
         'GuessTheNumber',
         windowSettings
     );
 
-    // Фокусируем окно (если не заблокировано)
     if (gameWindow) {
         gameWindow.focus();
-    } else {
-        // Альтернатива если всплывающие окна заблокированы
-        window.location.href = 'guessTheNumber/index.html';
     }
 });
+
