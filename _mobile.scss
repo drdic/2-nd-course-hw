@@ -1,160 +1,184 @@
 @media (max-width: 767px) {
-  
+
     .center {
         padding-left: 16px;
         padding-right: 16px;
-  }
+    }
 
-  .button {
-    width: 285px;
-    height: 55px;
-    font-size: 16px;
-    align-self: center;
-  }
+    .button {
+        width: 285px;
+        height: 55px;
+        font-size: 16px;
+        align-self: center;
+    }
 
-  .top {
+    .top {
         background-color: $lightgreen;
-        background-image: url(img/star_mobile.png), 
-        url(img/star_mobile_2.png), url(img/star_mobile_3.png),
-        url(img/star_mobile_4.png), url(img/vector_mobile.png);
+        background-image: url(img/star_mobile.png),
+            url(img/star_mobile_2.png), url(img/star_mobile_3.png),
+            url(img/star_mobile_4.png), url(img/vector_mobile.png);
         background-repeat: no-repeat;
         background-position:
-        61px 135px, 120px 79px,
-        calc(100% - 124px) 600px,
-        calc(100% - 70px) 630px,
-        calc(100%) 0px;
+            61px 135px, 120px 79px,
+            calc(100% - 124px) 600px,
+            calc(100% - 70px) 630px,
+            calc(100%) 0px;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
         width: auto;
 
-    &__head {
-        font-size: 40px;
-        line-height: 49px;
-        width: 262px;
-    }
-
-    &__text {
-        font-size: 16px;
-        line-height: 20px;
-    }
-
-    &__link {
-        font-size: 16px;
-        line-height: 20px;
+        &__head {
+            font-size: 40px;
+            line-height: 49px;
+            width: 262px;
         }
 
-    &__button {
-        width: 285px;
-        height: 55px;
-        margin-top: 36px;
-        font-size: 16px;
-        align-self: center;
+        &__text {
+            font-size: 16px;
+            line-height: 20px;
+        }
 
-        &:hover, &:active {
+        &__link {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        &__button {
+            width: 285px;
+            height: 55px;
+            margin-top: 36px;
+            font-size: 16px;
+            align-self: center;
+
+            &:hover,
+            &:active {
                 background: $black;
                 color: $white;
             }
 
-        &.mobile-only {
-        display: inline-block;
-        }
-      
-        &.desktop-only {
-        display: none;
+            &.mobile-only {
+                display: inline-block;
+            }
+
+            &.desktop-only {
+                display: none;
+            }
         }
     }
-  }
 
-  .menu {
+    .menu {
         height: 51px;
         width: auto;
 
-    &__item {
-        font-size: 16px;
+        &__item {
+            font-size: 16px;
+        }
+
+        &__img {
+            width: 18px;
+            height: 18px;
+        }
     }
 
-    &__img {
-        width: 18px;
-        height: 18px;
-    }
-  }
-
-  .games {
-    display: none;
-  }
-
-  .mini-games {
-    width: auto;
-    padding-bottom: 49px;
-
-    &__head {
-        font-size: 40px;
-        line-height: 100%;
-        padding-bottom: 48px;
-        padding-top: 48px;    
+    .games {
+        display: none;
     }
 
-    &__card {
-        flex-direction: column-reverse;
-        height: 529px;
-    }
+    .mini-games {
+        width: auto;
+        padding-bottom: 49px;
 
-    &__card:nth-child(2),
-    &__card:nth-child(4),
-    &__card:nth-child(6) {
-        flex-direction: column-reverse;
-    }
+        &__head {
+            font-size: 40px;
+            line-height: 100%;
+            padding-bottom: 48px;
+            padding-top: 48px;
+        }
 
-    &__card:nth-child(1),
-    &__card:nth-child(4) {
-        height: 529px;
-    }
+        &__card {
+            flex-direction: column-reverse;
+            height: 529px;
+        }
 
-    &__card:nth-child(2),
-    &__card:nth-child(3) {
-        height: 568px;
-    }
+        &__card:nth-child(2),
+        &__card:nth-child(4),
+        &__card:nth-child(6) {
+            flex-direction: column-reverse;
+        }
 
-    &__card:nth-child(5) {
-        height: 607px;
-    }
+        &__card:nth-child(1),
+        &__card:nth-child(4) {
+            height: 529px;
+        }
 
-    &__card:nth-child(6) {
-        height: 627px;
-    }
+        &__card:nth-child(2),
+        &__card:nth-child(3) {
+            height: 568px;
+        }
 
-    &__content {
-        padding: 29px;
-    }
+        &__card:nth-child(5) {
+            height: 607px;
+        }
 
-    &__title {
-        font-size: 32px;
-        padding-bottom: 16px;
-        line-height: 100%;
-    }
+        &__card:nth-child(6) {
+            height: 627px;
+        }
 
-    &__text {
-        font-size: 16px;
-        padding-bottom: 32px;
-        line-height: 100%;
-    }
+        &__content {
+            padding: 29px;
 
-    &__img {
-        width: 100%;
-    }
+            display: flex;
+            flex-direction: column;
+            padding: 29px;
+            width: 100%;
+            box-sizing: border-box;
+        }
 
-    &__button {
-        &:hover, &:active {
+        &__title {
+            font-size: 32px;
+            padding-bottom: 16px;
+            line-height: 100%;
+        }
+
+        &__text {
+            font-size: 16px;
+            padding-bottom: 32px;
+            line-height: 100%;
+        }
+
+        &__img {
+            width: 100%;
+        }
+
+        &__button {
+            width: 285px;
+            height: 55px;
+            align-self: center;
+            margin-top: auto;
+
+            &:hover,
+            &:active {
                 background: $black;
                 color: $white;
             }
+        }
     }
-  }
 
-  .footer {
-    height: 80px;
-    font-size: 16px;
-  }
+    .footer {
+        height: 80px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1197px) {
+    .games {
+
+        &__link:nth-child(4),
+        &__link:nth-child(6) {
+            margin-top: 0px;
+        }
+
+    }
 }
