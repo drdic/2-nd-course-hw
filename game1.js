@@ -9,14 +9,14 @@ document.getElementById('playGame1').addEventListener('click', function () {
         if (userNumber === 0) {
             break;
         } else if (userNumber < 1 || userNumber > 100) {
-            alert('От 1 до 100, подумай!');
+            alert('Введи число 1 до 100.');
         } else if (userNumber === predictedNumber) {
-            alert(`Отлично! Молодец! Загаданное число: ${predictedNumber}.`);
+            alert(`Отлично, молодец! Загаданное число: ${predictedNumber}.`);
             break;
         } else if (userNumber < predictedNumber) {
-            alert('Загаданное число больше)');
+            alert('Загаданное число больше, попробуй ещё.');
         } else if (userNumber > predictedNumber) {
-            alert('Загаданное число меньше)');
+            alert('Загаданное число меньше, попробуй ещё.');
         } else {
             alert('Ошибка');
             break;
