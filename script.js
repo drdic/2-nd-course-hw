@@ -15,10 +15,6 @@ function autoScroll() {
     }
     requestAnimationFrame(autoScroll);
 }
-// Останавливаем скроллинг при наведении
-
-// menu.addEventListener('mouseenter', () => isScrolling = false);
-// menu.addEventListener('mouseleave', () => isScrolling = true);
 
 autoScroll();
 
@@ -50,47 +46,67 @@ document.getElementById('playGame1').addEventListener('click', function () {
 })
 
 
-document.getElementById('playGame2').addEventListener('click', function () {
-
-    const operators = ['+', '-', '*', '/'];
-    const funcOper = operators[Math.floor((Math.random() * operators.length))];
-    let numb1 = Math.floor(Math.random() * 10) + 1;
-    let numb2 = Math.floor(Math.random() * 10) + 1;
-
-    switch (funcOper) {
-        case '+':
-            userAnswer = prompt(`Решите: ${numb1} + ${numb2} = ?`);
-            result = numb1 + numb2;
-            break;
-        case '-':
-            userAnswer = prompt(`Решите: ${numb1} - ${numb2} = ?`);
-            result = numb1 - numb2;
-            break;
-        case '*':
-            userAnswer = prompt(`Решите: ${numb1} x ${numb2} = ?`);
-            result = numb1 * numb2;
-            break;
-        case '/':
-            if (numb1 > numb2) {
-                userAnswer = prompt(`Решите: ${numb1} : ${numb2} = ? и округлите ответ до целого числа`);
-                result = numb1 / numb2;
-                break;
-            } else {
-                userAnswer = prompt(`Решите: ${numb2} : ${numb1} = ? и округлите ответ до целого числа`);
-                result = numb2 / numb1;
-                break;
-            };
-        default:
-            alert("Ошибка");
-    }
-
-    if (Number(userAnswer) === Math.round(result)) {
-        alert("Верно");
-    } else if (userAnswer === null) {
-        alert("До новых встреч!");
-    } else if (userAnswer === "") {
-        alert("Нет ответа(");
+document.getElementById('playGame2').addEventListener('click', function generateTask() {
+    let amount = 5;
+    const operations = ['+', '-', '*', '/'];
+    
+    let userAgree = confirm(`Вам необходимо решить ${amount} примеров на сложение, вычитание, умножение или деление!`);
+    if (!userAgree) {
+        alert('Приходите ещё!');
+        return;
     } else {
-        alert("Неверно");
+        let correctAnswers = 0;
+
+        for (let i = 0; i < amount; i++) {
+            let num1 = Math.floor(Math.random() * 10) + 1;
+            let num2 = Math.floor(Math.random() * 10) + 1;
+            const operation = operations[Math.floor(Math.random() * operations.length)];
+
+            if (operation === '/') {
+                const largerNum = Math.max(num1, num2);
+                const smallerNum = Math.min(num1, num2);
+                num1 = largerNum;
+                num2 = smallerNum;
+            }
+
+
+            let userAnswer = prompt(`Решите: ${num1} ${operation} ${num2} = ? (введите 'exit' для выхода)`);
+
+            if (userAnswer.toLowerCase() === 'exit') {
+                alert('Вы вышли из игры. Спасибо за участие!');
+                return;
+            }
+
+            userAnswer = Number(userAnswer);
+
+            let correctAnswer;
+            switch (operation) {
+                case '+':
+                    correctAnswer = num1 + num2;
+                    break;
+                case '-':
+                    correctAnswer = num1 - num2;
+                    break;
+                case '*':
+                    correctAnswer = num1 * num2;
+                    break;
+                case '/':
+                    correctAnswer = (num2 !== 0) ? Number((num1 / num2).toFixed(1))  : 'undefined';
+                    break;
+            }
+            console.log(typeof(userAnswer))
+            console.log(typeof(correctAnswer))
+            console.log(userAnswer)
+            console.log(correctAnswer)
+
+            if (userAnswer === correctAnswer) {
+                alert('Это правильный ответ!');
+                correctAnswers++;
+            } else {
+                alert(`Не верно. Правильный ответ: ${correctAnswer}`);
+            }
+        }
+        alert(`Вы ответили правильно на ${correctAnswers} из ${amount} примеров.`);
     }
 })
+   
