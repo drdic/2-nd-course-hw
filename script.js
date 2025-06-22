@@ -129,6 +129,50 @@ document.getElementById('playGame3').addEventListener('click', function () {
 })
 
 
+document.getElementById('playGame4').addEventListener('click', function () {
+
+    const quiz = [
+        {
+            question: "Какого цвета небо?",
+            options: ["1. Красного", "2. Синего", "3. Зеленого"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько дней в неделе?",
+            options: ["1. Шесть", "2. Семь", "3. Восемь"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько у человека пальцев на одной руке?",
+            options: ["1. Четыре", "2. Пять", "3. Шесть"],
+            correctAnswer: 2
+        }
+    ];
+
+    function runQuiz() {
+        let score = 0;
+
+        for (let i = 0; i < quiz.length; i++) {
+            const currentQuestion = quiz[i];
+            let questionText = `${currentQuestion.question}\n${currentQuestion.options.join('\n')}`;
+            const userAnswer = parseInt(prompt(questionText));
+
+            if (userAnswer === currentQuestion.correctAnswer) {
+                score++;
+                alert("Правильно!");
+            } else {
+                alert(`Неправильно! Правильный ответ: ${currentQuestion.correctAnswer}`);
+            }
+        }
+
+        alert(`Викторина завершена!\nПравильных ответов: ${score} из ${quiz.length}`);
+    }
+
+    runQuiz();
+})
+
+
+
 
 
 
