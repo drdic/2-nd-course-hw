@@ -8,7 +8,7 @@ menu.innerHTML += menu.innerHTML;
 function autoScroll() {
     if (isScrolling) {
         menu.scrollLeft += scrollSpeed;
-        
+
         if (menu.scrollLeft >= menu.scrollWidth / 2) {
             menu.scrollLeft = 0;
         }
@@ -49,7 +49,7 @@ document.getElementById('playGame1').addEventListener('click', function () {
 document.getElementById('playGame2').addEventListener('click', function generateTask() {
     let amount = 5;
     const operations = ['+', '-', '*', '/'];
-    
+
     let userAgree = confirm(`Вам необходимо решить ${amount} примеров на сложение, вычитание, умножение или деление!`);
     if (!userAgree) {
         alert('Приходите ещё!');
@@ -91,11 +91,11 @@ document.getElementById('playGame2').addEventListener('click', function generate
                     correctAnswer = num1 * num2;
                     break;
                 case '/':
-                    correctAnswer = (num2 !== 0) ? Number((num1 / num2).toFixed(1))  : 'undefined';
+                    correctAnswer = (num2 !== 0) ? Number((num1 / num2).toFixed(1)) : 'undefined';
                     break;
             }
-            console.log(typeof(userAnswer))
-            console.log(typeof(correctAnswer))
+            console.log(typeof (userAnswer))
+            console.log(typeof (correctAnswer))
             console.log(userAnswer)
             console.log(correctAnswer)
 
@@ -109,4 +109,32 @@ document.getElementById('playGame2').addEventListener('click', function generate
         alert(`Вы ответили правильно на ${correctAnswers} из ${amount} примеров.`);
     }
 })
-   
+
+
+document.getElementById('playGame3').addEventListener('click', function () {
+
+    function reverseString(str) {
+        return [...str].reverse().join("");
+    }
+
+    const userText = prompt('Введи любое слово и мы его перевернём');
+
+    if (userText === null) {
+        alert('До новых встреч)');
+    } else if (!userText.trim()) {
+        alert("Нет букв(");
+    } else {
+        alert(`Получилось: ${reverseString(userText)}`);
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
