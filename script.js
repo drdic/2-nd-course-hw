@@ -172,6 +172,36 @@ document.getElementById('playGame4').addEventListener('click', function () {
 })
 
 
+document.getElementById('playGame5').addEventListener('click', function () {
+
+    const userChoice = prompt('Выберите: камень, ножницы или бумага')?.toLowerCase();
+
+    if (userChoice === null) {
+        alert('До свидания!');
+    } else if (!['камень', 'ножницы', 'бумага'].includes(userChoice)) {
+        alert('Ошибка: нужно выбрать "камень", "ножницы" или "бумага"');
+    } else {
+        const choices = ['камень', 'ножницы', 'бумага'];
+        const compChoice = choices[Math.floor(Math.random() * choices.length)];
+
+        let result;
+        if (userChoice === compChoice) {
+            result = 'НИЧЬЯ';
+        } else if (
+            (userChoice === 'камень' && compChoice === 'ножницы') ||
+            (userChoice === 'ножницы' && compChoice === 'бумага') ||
+            (userChoice === 'бумага' && compChoice === 'камень')
+        ) {
+            result = 'ПОБЕДА';
+        } else {
+            result = 'ПОРАЖЕНИЕ';
+        }
+
+        alert(`${result}. У вас ${userChoice}, у компьютера ${compChoice}`);
+    }
+})
+
+
 
 
 
