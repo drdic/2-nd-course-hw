@@ -200,15 +200,3 @@ document.getElementById('playGame5').addEventListener('click', function () {
         alert(`${result}. У вас ${userChoice}, у компьютера ${compChoice}`);
     }
 })
-
-
-
-
-
-
-
-
-
-
-
-
