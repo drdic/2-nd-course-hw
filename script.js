@@ -43,7 +43,7 @@ document.getElementById('playGame1').addEventListener('click', function () {
             break;
         }
     }
-})
+});
 
 
 document.getElementById('playGame2').addEventListener('click', function generateTask() {
@@ -108,7 +108,7 @@ document.getElementById('playGame2').addEventListener('click', function generate
         }
         alert(`Вы ответили правильно на ${correctAnswers} из ${amount} примеров.`);
     }
-})
+});
 
 
 document.getElementById('playGame3').addEventListener('click', function () {
@@ -126,7 +126,7 @@ document.getElementById('playGame3').addEventListener('click', function () {
     } else {
         alert(`Получилось: ${reverseString(userText)}`);
     }
-})
+});
 
 
 document.getElementById('playGame4').addEventListener('click', function () {
@@ -169,7 +169,7 @@ document.getElementById('playGame4').addEventListener('click', function () {
     }
 
     runQuiz();
-})
+});
 
 
 document.getElementById('playGame5').addEventListener('click', function () {
@@ -199,4 +199,25 @@ document.getElementById('playGame5').addEventListener('click', function () {
 
         alert(`${result}. У вас ${userChoice}, у компьютера ${compChoice}`);
     }
-})
+});
+
+
+document.getElementById('playGame6').addEventListener('click', function () {
+
+    const sectionPlay = document.querySelector('.mini-games');
+
+    function getRandomColor() {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    function changeBackgroundColor() {
+        const randomColor = getRandomColor();
+        sectionPlay.style.backgroundColor = randomColor;
+    }
+
+    changeBackgroundColor();
+
+});

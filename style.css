@@ -194,6 +194,7 @@ a {
   background-repeat: no-repeat;
   background-position: 1383px 60px, 1329px 20px, 1400px 3290px, 1323px 3350px;
   padding-bottom: 144px;
+  transition: background-color 0.5s ease;
 }
 .mini-games__cards {
   display: flex;
